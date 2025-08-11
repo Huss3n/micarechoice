@@ -32,15 +32,15 @@ export default function Header() {
     <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
       scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 sm:p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Micare Choice</span>
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">M</span>
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg sm:text-xl">M</span>
               </div>
-              <span className={`text-xl font-bold transition-colors duration-300 ${
+              <span className={`text-lg sm:text-xl font-bold transition-colors duration-300 ${
                 scrolled ? 'text-gray-900' : 'text-white'
               }`}>
                 Micare Choice
@@ -116,16 +116,16 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-              className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+              className="fixed inset-y-0 right-0 z-50 w-80 max-w-[85vw] overflow-y-auto bg-white px-4 sm:px-6 py-6 shadow-2xl"
             >
               <div className="flex items-center justify-between">
                 <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
                   <span className="sr-only">Micare Choice</span>
                   <div className="flex items-center space-x-2">
                     <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold">M</span>
+                      <span className="text-white font-bold text-sm">M</span>
                     </div>
-                    <span className="text-lg font-bold text-gray-900">Micare Choice</span>
+                    <span className="text-base font-bold text-gray-900">Micare Choice</span>
                   </div>
                 </Link>
                 <button
