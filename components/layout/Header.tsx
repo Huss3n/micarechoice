@@ -34,15 +34,15 @@ export default function Header() {
     <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
       scrolled ? 'bg-white/98 backdrop-blur-md shadow-lg border-b border-gray-200' : 'bg-black/20 backdrop-blur-sm'
     }`}>
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 sm:p-6 lg:px-8" aria-label="Global">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Micare Choice</span>
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg sm:text-xl">M</span>
+              <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-primary-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-base sm:text-lg md:text-xl">M</span>
               </div>
-              <span className={`text-lg sm:text-xl font-bold transition-colors duration-300 ${
+              <span className={`text-base sm:text-lg md:text-xl font-bold transition-colors duration-300 ${
                 scrolled ? 'text-gray-900' : 'text-white'
               }`}>
                 Micare Choice
@@ -54,7 +54,7 @@ export default function Header() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 hover:bg-white/10 transition-colors"
+            className="-m-3 inline-flex items-center justify-center rounded-md p-3 hover:bg-white/10 transition-colors"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -119,7 +119,7 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
-              className="fixed top-0 right-0 h-full w-72 bg-white shadow-2xl z-[70]"
+              className="fixed top-0 right-0 h-full w-full max-w-xs bg-white shadow-2xl z-[70]"
             >
               {/* Header with close button */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200 bg-white">
