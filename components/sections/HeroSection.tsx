@@ -7,7 +7,7 @@ import { ChevronRightIcon, PhoneIcon, HeartIcon } from '@heroicons/react/24/outl
 
 export default function HeroSection() {
   return (
-    <div className="relative min-h-screen flex items-center">
+    <div className="relative min-h-screen flex items-center pt-20 sm:pt-24">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -21,13 +21,13 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
         <div className="mx-auto max-w-3xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
+            className="mb-8 mt-8"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
               Empowering Lives Through 
